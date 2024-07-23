@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  justify-items: center;
+  height: 100vh;
+}
+
+.outletWrapper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,97 @@
+.table_wrapper {
+  max-width: 968px;
+  width: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+  padding: 40px 37px;
+}
+
+.table_title_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table_title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.table_label {
+  color: #16c098;
+  font-size: 14px;
+}
+
+.table_list {
+  width: 100%;
+}
+
+.table_list_header,
+.table_list_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table_list_header_item,
+.table_list_item {
+  flex: 1;
+  text-align: left;
+  padding: 0 8px;
+}
+
+.table_list_header {
+  font-weight: bold;
+}
+
+.table_list .status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.table_list .status.active {
+  background-color: #4caf50; /* зелений */
+}
+
+.table_list .status.inactive {
+  background-color: #f44336; /* червоний */
+}
+
+/* .table_list_wrapper {
+  width: 100%;
+  border-collapse: collapse; 
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.table_list_wrapper th,
+.table_list_wrapper td {
+  padding: 12px;
+  border: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.table_list_wrapper th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table_list_wrapper .status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.table_list_wrapper .status.active {
+  background-color: #4caf50; 
+}
+
+.table_list_wrapper .status.inactive {
+  background-color: #f44336; 
+} */
