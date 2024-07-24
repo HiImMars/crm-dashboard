@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import cn from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import { ISidebarItem } from "./types";
@@ -21,7 +21,7 @@ export const SidebarItem: FC<ISidebarItem> = ({ title, link, icon }) => {
           <img
             src={icon}
             alt={title}
-            className={cn({
+            className={cn(css.sidebar_icon, {
               [css.icon_active]: isActive,
             })}
           />
@@ -31,7 +31,7 @@ export const SidebarItem: FC<ISidebarItem> = ({ title, link, icon }) => {
         <img
           src={arrow}
           alt="right arrow"
-          className={cn({
+          className={cn(css.sidebar_icon, {
             [css.svg_active]: isActive,
           })}
         />

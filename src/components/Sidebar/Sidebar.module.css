@@ -36,6 +36,23 @@
   padding: 12px;
 }
 
+.sidebarList_link {
+  transition: background-color 150ms linear, color 150ms linear;
+}
+
+.sidebar_icon {
+  transition: filter 150ms linear;
+}
+
+.sidebarList_link:hover {
+  background-color: #5932ea;
+  color: #ffff;
+}
+
+.sidebarList_link:hover .sidebar_icon {
+  filter: brightness(0) invert(1);
+}
+
 .sidebarList_link_active {
   background-color: #5932ea;
   color: #ffff;
@@ -47,14 +64,14 @@
   gap: 12px;
 }
 
-.icon_active {
-  filter: invert(1) sepia(1) saturate(0) hue-rotate(0deg) brightness(1)
-    contrast(1);
+.icon_active,
+.svg_active {
+  transition: filter 150ms linear;
 }
 
-.svg_active g,
-.svg_active path {
-  fill: #fff;
+.icon_active,
+.svg_active {
+  filter: brightness(0) invert(1);
 }
 
 .avatar_wrapper {

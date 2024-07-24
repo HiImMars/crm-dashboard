@@ -33,7 +33,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 20px; */
   padding: 20px 0;
   border-bottom: 1px solid #eaeaea;
 }
@@ -41,7 +40,8 @@
 .table_list .status {
   display: block;
   width: 80px;
-  padding: 4px 18px;
+  text-align: center;
+  padding: 4px 12px;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
@@ -64,8 +64,6 @@
   flex: 1;
   font-size: 14px;
   font-weight: 500;
-  /* padding: 0 10px; */
-  /* text-align: left; */
 }
 
 .table_list_header_item {
@@ -88,37 +86,6 @@
   color: #b5b7c0;
 }
 
-/* .table_list_wrapper {
-  width: 100%;
-  border-collapse: collapse; 
-  border-top: none;
-  border-right: none;
-  border-left: none;
+.table_list_email {
+  min-width: 170px;
 }
-
-.table_list_wrapper th,
-.table_list_wrapper td {
-  padding: 12px;
-  border: 1px solid #eaeaea;
-  text-align: left;
-}
-
-.table_list_wrapper th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
-.table_list_wrapper .status {
-  padding: 4px 8px;
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-}
-
-.table_list_wrapper .status.active {
-  background-color: #4caf50; 
-}
-
-.table_list_wrapper .status.inactive {
-  background-color: #f44336; 
-} */

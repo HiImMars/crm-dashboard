@@ -2,6 +2,7 @@ import { useState } from "react";
 import { LIST_HEADERS, LIST_ITEMS } from "./constants";
 import css from "./CustomersTable.module.css";
 import { Pagination } from "../Pagination";
+import cn from "classnames";
 
 export const CustomersList = () => {
   const [page, setPage] = useState(1);
@@ -29,7 +30,9 @@ export const CustomersList = () => {
               <div className={css.table_list_item}>{item.name}</div>
               <div className={css.table_list_item}>{item.company}</div>
               <div className={css.table_list_item}>{item.phone}</div>
-              <div className={css.table_list_item}>{item.email}</div>
+              <div className={cn(css.table_list_item, css.table_list_email)}>
+                {item.email}
+              </div>
               <div className={css.table_list_item}>{item.country}</div>
               <div className={css.table_list_item}>
                 <span

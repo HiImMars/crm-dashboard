@@ -1,4 +1,3 @@
-import React from "react";
 import { SIDEBAR_ITEMS } from "./constants";
 import { SidebarItem } from "./SidebarItem";
 import css from "./Sidebar.module.css";

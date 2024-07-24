@@ -1,9 +1,3 @@
-// import css from "./Search.module.css";
-
-// export const Search = () => {
-//   return <input className={css.search_input} placeholder="Search" />;
-// };
-
 import css from "./Search.module.css";
 import searchIcon from "../../assets/icons/search-icon.svg";
 
