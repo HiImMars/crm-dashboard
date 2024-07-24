@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from "../../assets/images/avatar.png";
 import css from "./Sidebar.module.css";
 

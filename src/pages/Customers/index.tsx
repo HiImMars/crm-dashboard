@@ -1,4 +1,3 @@
-import React from "react";
 import css from "./Customers.module.css";
 import { CustomersTable } from "../../components/CustomersTable";
 
