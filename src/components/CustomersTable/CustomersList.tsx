@@ -8,7 +8,6 @@ export const CustomersList = () => {
   const itemsPerPage = 8;
   const pageCount = Math.ceil(LIST_ITEMS.length / itemsPerPage);
 
-  // Отримуємо елементи для поточної сторінки
   const currentItems = LIST_ITEMS.slice(
     (page - 1) * itemsPerPage,
     page * itemsPerPage
@@ -45,15 +44,20 @@ export const CustomersList = () => {
           ))}
         </div>
       </div>
-      <div>
-        <p>
+      <div className={css.table_list_bottom}>
+        <p className={css.table_bottom_entries}>
           Showing data {(page - 1) * itemsPerPage + 1} to{" "}
           {page * itemsPerPage > LIST_ITEMS.length
             ? LIST_ITEMS.length
             : page * itemsPerPage}{" "}
           of {LIST_ITEMS.length} entries
         </p>
-        <Pagination page={page} pageCount={pageCount} setPage={setPage} />
+        <Pagination
+          page={page}
+          pageCount={pageCount}
+          setPage={setPage}
+          className={css.table_bottom_pagination}
+        />
       </div>
     </>
   );

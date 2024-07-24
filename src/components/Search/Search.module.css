@@ -1,0 +1,47 @@
+/* .search_input {
+  min-width: 216px;
+  max-height: 38px;
+  background-color: #f9fbff;
+  border-radius: 10px;
+  padding: 10px;
+  outline: 0;
+  border: none;
+}
+
+.search_input::placeholder {
+  color: #b5b7c0;
+} */
+
+.search_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9ff;
+  border-radius: 10px;
+  /* padding: 10px; */
+  /* width: 216px; */
+}
+
+.search_icon {
+  position: absolute;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+
+.search_input {
+  width: 216px;
+  height: 38px;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  /* color: #b5b7c0;  */
+  background-color: transparent; /* Прозорий фон, щоб зберегти фон контейнера */
+}
+
+.search_input::placeholder {
+  color: #b5b7c0; /* Колір плейсхолдера */
+}
