@@ -8,13 +8,16 @@ const Customers = () => {
   const titleRef = useRef(null);
   const tableRef = useRef(null);
 
-  // useGSAP(
-  //   () => {
-  //     gsap.to(titleRef.current, { x: 100 });
-  //     gsap.to(tableRef.current, { rotation: 360 });
-  //   },
-  //   { scope: tableRef }
-  // );
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        tableRef.current,
+        { x: "100%", opacity: 0 },
+        { x: 0, opacity: 1, ease: "power2.out", duration: 0.5 }
+      );
+    },
+    { scope: tableRef }
+  );
 
   return (
     <div className={css.customers_container}>

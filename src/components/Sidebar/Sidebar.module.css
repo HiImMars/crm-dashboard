@@ -1,4 +1,5 @@
 .sidebarWrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +12,6 @@
 @media only screen and (max-width: 767px) {
   .sidebarWrapper {
     width: 100%;
-    height: 100vh;
   }
 }
 

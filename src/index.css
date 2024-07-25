@@ -96,3 +96,21 @@ a {
   | / PAGINATION
   |============================
 */
+
+/* under construction */
+.construction-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-image {
+  max-width: 260px;
+}
+
+@media only screen and (min-width: 768px) {
+  .construction-image {
+    max-width: 400px;
+  }
+}
+/* / under construction */

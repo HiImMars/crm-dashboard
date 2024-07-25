@@ -1,5 +1,7 @@
 const Income = () => {
-  return <div>Income</div>;
+  return (
+    <div className="construction-wrapper container">UNDER CONSTRUCTION 🛠️</div>
+  );
 };
 
 export default Income;

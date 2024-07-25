@@ -40,6 +40,7 @@
 
 .table_list {
   width: 100%;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -92,6 +93,7 @@
   font-size: 14px;
   font-weight: 500;
 }
+
 @media only screen and (min-width: 1024px) {
   .table_list_item {
     flex: 1;
@@ -99,6 +101,7 @@
 }
 
 .table_list_header_item {
+  flex: 1;
   color: #b5b7c0;
 }
 
@@ -128,6 +131,12 @@
 
 .table_list_email {
   min-width: 170px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .table_list_email {
+    margin-left: 8px;
+  }
 }
 
 .mobile_table_list_wrapper {
