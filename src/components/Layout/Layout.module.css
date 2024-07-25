@@ -1,11 +1,25 @@
 .layout {
   display: flex;
-  justify-items: center;
-  height: 100vh;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+@media only screen and (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .outletWrapper {
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 40px;
 }

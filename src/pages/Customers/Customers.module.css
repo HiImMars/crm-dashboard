@@ -5,5 +5,28 @@
 
 .title {
   font-size: 24px;
-  margin-bottom: 51px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .title {
+    margin-bottom: 51px;
+  }
+}
+
+.hand {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

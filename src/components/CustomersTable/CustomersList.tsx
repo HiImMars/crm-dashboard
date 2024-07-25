@@ -1,17 +1,25 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { LIST_HEADERS, LIST_ITEMS } from "./constants";
 import css from "./CustomersTable.module.css";
 import { Pagination } from "../Pagination";
-import cn from "classnames";
+import { CustomersListItem } from "./CustomersListItem";
+import { MobileCustomersListItem } from "./MobileCustomersListItem";
+
+const ITEMS_PER_PAGE = 8;
 
 export const CustomersList = () => {
+  const isMobileOrTabletScreen = useMediaQuery({
+    maxWidth: "1024px",
+  });
+
   const [page, setPage] = useState(1);
-  const itemsPerPage = 8;
-  const pageCount = Math.ceil(LIST_ITEMS.length / itemsPerPage);
+
+  const pageCount = Math.ceil(LIST_ITEMS.length / ITEMS_PER_PAGE);
 
   const currentItems = LIST_ITEMS.slice(
-    (page - 1) * itemsPerPage,
-    page * itemsPerPage
+    (page - 1) * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE
   );
 
   return (
@@ -24,35 +32,24 @@ export const CustomersList = () => {
             </div>
           ))}
         </div>
+
         <div className={css.table_list_body}>
-          {currentItems.map((item) => (
-            <div key={item.id} className={css.table_list_row}>
-              <div className={css.table_list_item}>{item.name}</div>
-              <div className={css.table_list_item}>{item.company}</div>
-              <div className={css.table_list_item}>{item.phone}</div>
-              <div className={cn(css.table_list_item, css.table_list_email)}>
-                {item.email}
-              </div>
-              <div className={css.table_list_item}>{item.country}</div>
-              <div className={css.table_list_item}>
-                <span
-                  className={`${css.status} ${
-                    item.status === "Active" ? css.active : css.inactive
-                  }`}
-                >
-                  {item.status}
-                </span>
-              </div>
-            </div>
-          ))}
+          {currentItems.map((item) => {
+            return isMobileOrTabletScreen ? (
+              <MobileCustomersListItem key={item.id} {...item} />
+            ) : (
+              <CustomersListItem key={item.id} {...item} />
+            );
+          })}
         </div>
       </div>
+
       <div className={css.table_list_bottom}>
         <p className={css.table_bottom_entries}>
-          Showing data {(page - 1) * itemsPerPage + 1} to{" "}
-          {page * itemsPerPage > LIST_ITEMS.length
+          Showing data {(page - 1) * ITEMS_PER_PAGE + 1} to{" "}
+          {page * ITEMS_PER_PAGE > LIST_ITEMS.length
             ? LIST_ITEMS.length
-            : page * itemsPerPage}{" "}
+            : page * ITEMS_PER_PAGE}{" "}
           of {LIST_ITEMS.length} entries
         </p>
         <Pagination

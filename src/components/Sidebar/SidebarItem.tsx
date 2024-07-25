@@ -5,12 +5,22 @@ import { ISidebarItem } from "./types";
 import arrow from "../../assets/icons/arrow-right.svg";
 import css from "./Sidebar.module.css";
 
-export const SidebarItem: FC<ISidebarItem> = ({ title, link, icon }) => {
+interface Props extends ISidebarItem {
+  setIsOpen?: (isOpen: boolean) => void;
+}
+
+export const SidebarItem: FC<Props> = ({ title, link, icon, setIsOpen }) => {
   const location = useLocation();
   const isActive = location.pathname === link;
 
+  const handleClick = () => {
+    if (setIsOpen) {
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <li>
+    <li onClick={handleClick}>
       <Link
         to={link}
         className={cn(css.sidebarList_link, {
